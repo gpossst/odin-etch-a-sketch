@@ -1,0 +1,25 @@
+body {
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pixel {
+    background-color: white;
+}
+
+#board {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+    background-color: grey;
+    flex-grow: 1;
+}
+
+.hovered {
+    background-color: black;
+}

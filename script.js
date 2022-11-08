@@ -11,7 +11,6 @@ for (let i=0; i<square; i++){
 
 function populateBoard(){
     const pixel = document.createElement('div');
-    let pixelSize = `${500/myInput}px`;
     pixel.classList.add('pixel');
     pixel.style.width = pixelSize;
     pixel.style.height = pixelSize;
@@ -19,16 +18,23 @@ function populateBoard(){
     pixel.addEventListener('mouseover', function(e){
         pixel.classList.add('hovered')
     })
-    console.log(pixelSize)
+    console.log(myInput)
 }
 
 function btnFunction(){
     removeAllChildNodes();
     let myInput = document.getElementById('userInput').value;
     let square = myInput*myInput;
-    //let pixelSize = `${500/myInput}px`;//
+    let pixelSize = `${500/myInput}px`;
     for (let i=0; i<square; i++){
-        populateBoard()
+        const pixel = document.createElement('div');
+        pixel.classList.add('pixel');
+        pixel.style.width = pixelSize;
+        pixel.style.height = pixelSize;
+        board.appendChild(pixel);
+        pixel.addEventListener('mouseover', function(e){
+            pixel.classList.add('hovered')
+        })
     }
 }
 

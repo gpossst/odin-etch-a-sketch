@@ -17,7 +17,6 @@ body {
     width: 500px;
     height: 500px;
     background-color: grey;
-    flex-grow: 1;
 }
 
 .hovered {
